@@ -8,11 +8,38 @@
   <style>
     body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
     
-    header { background:#0A3D62; color:#fff; padding:40px 20px; text-align:center; }
-    header img { height: 80px; display: block; margin: 0 auto 12px; }
-    header h1 { margin:0; font-size:2.4rem; }
-    header p { margin-top:8px; font-size:1rem; }
+    /* Header */
+    header { 
+      background:#0A3D62; 
+      color:#fff; 
+      padding:20px 40px; 
+      display:flex; 
+      align-items:center; 
+      justify-content:flex-start; 
+      gap:20px; 
+    }
 
+    header img { 
+      height:80px; 
+      width:auto; 
+    }
+
+    header .header-text {
+      display:flex;
+      flex-direction:column;
+    }
+
+    header h1 { 
+      margin:0; 
+      font-size:2rem; 
+    }
+
+    header p { 
+      margin:4px 0 0 0; 
+      font-size:1rem; 
+    }
+
+    /* Sections */
     section { padding:40px 20px; max-width:1200px; margin:auto; }
     h2 { text-align:center; color:#0A3D62; margin-bottom:24px; }
 
@@ -32,9 +59,10 @@
 
     footer { background:#0A3D62; color:#fff; text-align:center; padding:18px 10px; margin-top:40px; }
 
-    @media (max-width:600px) {
+    @media (max-width:800px) {
+      header { flex-direction:column; align-items:center; text-align:center; }
+      header .header-text { align-items:center; }
       header h1 { font-size:1.6rem; }
-      .btn { display:block; width:90%; margin:8px auto; text-align:center; }
     }
 
     .helper { font-size:0.95rem; color:#fff; margin-top:8px; opacity:0.9; }
@@ -44,8 +72,10 @@
 
   <header>
     <img src="TechStructInn_Logo.png" alt="TechStruct Innovations Logo" />
-    <h1>TechStruct Innovations</h1>
-    <p>Empowering Your Business to Work Securely, Anywhere, Anytime</p>
+    <div class="header-text">
+      <h1>TechStruct Innovations</h1>
+      <p>Empowering Your Business to Work Securely, Anywhere, Anytime</p>
+    </div>
   </header>
 
   <section>
