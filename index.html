@@ -14,30 +14,33 @@
       color:#fff; 
       padding:20px 40px; 
       display:flex; 
-      align-items:center;      /* centers content vertically */
-      justify-content:flex-start; 
+      align-items:center;      /* centers items vertically */
       gap:20px; 
     }
 
     header img { 
       height:80px; 
       width:auto; 
+      flex-shrink:0; /* prevents shrinking */
     }
 
     header .header-text {
       display:flex;
       flex-direction:column;
-      justify-content:center;  /* vertically center the text next to the logo */
+      justify-content:center;  /* vertically centers text next to logo */
+      flex:1; /* allows text to take remaining space */
     }
 
     header h1 { 
       margin:0; 
       font-size:2rem; 
+      line-height:1.2; 
     }
 
     header p { 
       margin:4px 0 0 0; 
       font-size:1rem; 
+      line-height:1.3; 
     }
 
     /* Sections */
@@ -62,7 +65,7 @@
 
     @media (max-width:800px) {
       header { flex-direction:column; align-items:center; text-align:center; }
-      header .header-text { align-items:center; }
+      header .header-text { align-items:center; margin-top:10px; }
       header h1 { font-size:1.6rem; }
     }
 
