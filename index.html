@@ -14,21 +14,21 @@
       color:#fff; 
       padding:20px 40px; 
       display:flex; 
-      align-items:center;      /* centers items vertically */
+      align-items:flex-start;   /* aligns logo top-left */
       gap:20px; 
     }
 
     header img { 
       height:80px; 
       width:auto; 
-      flex-shrink:0; /* prevents shrinking */
+      flex-shrink:0;
     }
 
     header .header-text {
       display:flex;
       flex-direction:column;
-      justify-content:center;  /* vertically centers text next to logo */
-      flex:1; /* allows text to take remaining space */
+      justify-content:center;   /* vertically centers text next to logo */
+      flex:1;
     }
 
     header h1 { 
@@ -65,7 +65,7 @@
 
     @media (max-width:800px) {
       header { flex-direction:column; align-items:center; text-align:center; }
-      header .header-text { align-items:center; margin-top:10px; }
+      header .header-text { margin-top:10px; align-items:center; }
       header h1 { font-size:1.6rem; }
     }
 
@@ -74,7 +74,7 @@
 </head>
 <body>
 
-  <!-- Header with Logo -->
+  <!-- Header with Logo Top-Left -->
   <header>
     <img src="TechStructInn_Logo.png" alt="TechStruct Innovations Logo">
     <div class="header-text">
