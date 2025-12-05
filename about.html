@@ -20,17 +20,27 @@
       gap:20px; 
     }
 
-    /* Left section: logo + header text */
+    /* Left section: logo + header text + CEO photo */
     .header-left { 
       display:flex; 
-      align-items:center; 
-      gap:20px;
+      flex-direction:column; /* logo and CEO photo stacked vertically */
+      align-items:flex-start; 
+      gap:10px;
       flex:1; /* takes available space so button stays on far right */
     }
+
+    .logo-text { display:flex; align-items:center; gap:20px; }
 
     header img { height:80px; width:auto; }
 
     .header-text { display:flex; flex-direction:column; justify-content:center; }
+
+    .ceo-photo { 
+      height:100px; 
+      width:auto; 
+      border-radius:50%; 
+      margin-top:10px;
+    }
 
     header h1 { margin:0; font-size:2rem; }
     header p { margin:4px 0 0 0; font-size:1rem; }
@@ -88,8 +98,10 @@
 
     @media (max-width:800px) {
       header { flex-direction:column; align-items:center; text-align:center; gap:10px; }
-      .header-left { flex-direction:column; align-items:center; gap:10px; }
+      .header-left { align-items:center; }
+      .logo-text { flex-direction:column; align-items:center; }
       header img { height:70px; }
+      .ceo-photo { height:80px; }
       header h1 { font-size:1.6rem; }
       .btn { margin-top:10px; }
     }
@@ -100,12 +112,17 @@
 
 <header>
   <div class="header-left">
-    <img src="TechStructInn_Logo.png" alt="TechStruct Innovations Logo">
-    <div class="header-text">
-      <h1>TechStruct Innovations</h1>
-      <p>Empowering Your Business to Work Securely, Anywhere, Anytime</p>
+    <div class="logo-text">
+      <img src="TechStructInn_Logo.png" alt="TechStruct Innovations Logo">
+      <div class="header-text">
+        <h1>TechStruct Innovations</h1>
+        <p>Empowering Your Business to Work Securely, Anywhere, Anytime</p>
+      </div>
     </div>
+    <!-- CEO Photo below the logo -->
+    <img src="CEO.jpg" alt="CEO Photo" class="ceo-photo">
   </div>
+
   <!-- Home button on the far right -->
   <a class="btn" href="index.html">🏠 Home</a>
 </header>
