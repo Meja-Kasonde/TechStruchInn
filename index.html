@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +14,9 @@
       color:#fff; 
       padding:20px 40px; 
       display:flex; 
-      align-items:flex-start;   /* aligns logo top-left */
+      align-items:center;
       gap:20px; 
+      justify-content:space-between;
     }
 
     header img { 
@@ -25,24 +25,32 @@
       flex-shrink:0;
     }
 
-    header .header-text {
+    .header-left {
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+
+    .header-text {
       display:flex;
       flex-direction:column;
-      justify-content:center;   /* vertically centers text next to logo */
-      flex:1;
+      justify-content:center;
     }
 
-    header h1 { 
-      margin:0; 
-      font-size:2rem; 
-      line-height:1.2; 
+    header h1 { margin:0; font-size:2rem; }
+    header p { margin:4px 0 0; font-size:1rem; }
+
+    /* Navigation */
+    nav a {
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+      margin-left:20px;
+      font-size:1rem;
+      transition:0.2s;
     }
 
-    header p { 
-      margin:4px 0 0 0; 
-      font-size:1rem; 
-      line-height:1.3; 
-    }
+    nav a:hover { color:#cce3ff; }
 
     /* Sections */
     section { padding:40px 20px; max-width:1200px; margin:auto; }
@@ -58,106 +66,32 @@
     ul li::before { content:'✅'; position:absolute; left:0; }
 
     .cta { text-align:center; margin-top:36px; background:#0A3D62; color:#fff; padding:36px 20px; border-radius:8px; }
-    .btn { display:inline-block; background:#fff; color:#0A3D62; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:700; margin:8px; transition:background .2s, color .2s; }
+    .btn { display:inline-block; background:#fff; color:#0A3D62; padding:10px 18px; border-radius:6px; text-decoration:none; font-weight:700; margin:8px; transition:0.2s; }
     .btn:hover { background:#074b8a; color:#fff; }
-    .btn.disabled { background:#e0e0e0; color:#666; cursor:not-allowed; }
 
     footer { background:#0A3D62; color:#fff; text-align:center; padding:18px 10px; margin-top:40px; }
 
     @media (max-width:800px) {
-      header { flex-direction:column; align-items:center; text-align:center; }
-      header .header-text { margin-top:10px; align-items:center; }
-      header h1 { font-size:1.6rem; }
+      header { flex-direction:column; text-align:center; }
+      nav { margin-top:10px; }
     }
-
-    .helper { font-size:0.95rem; color:#fff; margin-top:8px; opacity:0.9; }
   </style>
 </head>
+
 <body>
 
-  <!-- Header with Logo Top-Left -->
-  <header>
+<header>
+  <div class="header-left">
     <img src="TechStructInn_Logo.png" alt="TechStruct Innovations Logo">
     <div class="header-text">
       <h1>TechStruct Innovations</h1>
       <p>Empowering Your Business to Work Securely, Anywhere, Anytime</p>
     </div>
-  </header>
+  </div>
 
-  <!-- Our Services Section -->
-  <section>
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service"><h3>Banking Consultants</h3><p>ICT advisory services tailored to banking and financial sectors to optimize systems and compliance.</p></div>
-      <div class="service"><h3>IT System Audit</h3><p>Full assessment of IT systems to identify gaps, risks, and opportunities for efficiency.</p></div>
-      <div class="service"><h3>CCTV Camera Installations</h3><p>High-quality security camera installations for businesses and institutions.</p></div>
-      <div class="service"><h3>Server Management</h3><p>Secure, optimized server setup, maintenance, and 24/7 monitoring services.</p></div>
-      <div class="service"><h3>ICT Support</h3><p>Comprehensive ICT support services to resolve daily technical issues and long-term planning.</p></div>
-      <div class="service"><h3>Printer Maintenance</h3><p>Printer setup, troubleshooting, and regular maintenance to ensure uninterrupted workflows.</p></div>
-      <div class="service"><h3>IT Infrastructure Management</h3><p>Strategic planning and management of hardware, software, networks, and systems.</p></div>
-      <div class="service"><h3>IP Phones Installations</h3><p>Modern VoIP phone systems installation and configuration for scalable communication.</p></div>
-      <div class="service"><h3>Hardware Installations & Maintenance</h3><p>Deployment and upkeep of desktops, laptops, routers, and peripherals for smooth operations.</p></div>
-      <div class="service"><h3>Technology Training</h3><p>Customized training for staff on new technologies, software usage, and digital tools.</p></div>
-      <div class="service"><h3>Troubleshooting & Technical Support</h3><p>Fast, effective problem-solving for hardware, software, and network issues.</p></div>
-      <div class="service"><h3>Software Development</h3><p>Custom software solutions to automate workflows and improve business performance.</p></div>
-      <div class="service"><h3>Remote Support</h3><p>Instant technical support from our experts via secure remote desktop tools.</p></div>
-      <div class="service"><h3>Information Reporting</h3><p>Clear, insightful IT reporting dashboards and analytics for smart decision-making.</p></div>
-      <div class="service"><h3>Network Security</h3><p>Protect your network with firewalls, threat monitoring, and best-in-class encryption protocols.</p></div>
-      <div class="service"><h3>Biometric Access Control</h3><p>Secure your premises with fingerprint, facial recognition, and smart access technologies.</p></div>
-      <div class="service"><h3>Network Installation & Maintenance</h3><p>Design, setup, and ongoing maintenance of secure wired and wireless networks.</p></div>
-      <div class="service"><h3>Office ID Cards</h3><p>Design and printing of professional staff ID cards with security features and company branding.</p></div>
-    </div>
-  </section>
-
-  <!-- Why Choose TechStruct -->
-  <section class="why-choose">
-    <h2>Why Choose TechStruct?</h2>
-    <ul>
-      <li>Certified Experts in ICT and Business Technology</li>
-      <li>Comprehensive range of over 15 professional services</li>
-      <li>Trusted partners of CHESCO TECH</li>
-      <li>Trusted partners of RUJEL TECH BUSINESS SERVICES</li>
-      <li>Trusted partners of CORNY DISTRIBUTORS</li>
-      <li>Reliable Zambia-based company</li>
-    </ul>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="cta" aria-labelledby="cta-heading">
-    <h2 id="cta-heading">Book Your Free Consultation</h2>
-    <p class="helper">Let’s talk about how TechStruct Innovations can streamline and secure your IT systems.</p>
-
-    <a class="btn" href="tel:+260972336584" id="callBtn">📞 Call Us: +260 972 336 584</a>
-    <a class="btn" href="mailto:elviskasonde@gmail.com" id="emailBtn">📧 Email: elviskasonde@gmail.com</a>
-    <a class="btn" href="https://wa.me/260972336584" id="waBtn" target="_blank" rel="noopener">💬 WhatsApp Us</a>
-
-    <a class="btn" id="blueprintLink" href="TechStruct-Innovations-Services-Color.pdf" download>
-      ⬇️ Download the Blueprint PDF
-    </a>
-
-    <p class="helper" id="blueprintNote" style="opacity:0.95; color: #fff; margin-top:8px;">
-      Click the button above to download the PDF.
-    </p>
-  </section>
-
-  <!-- TechStruct Blueprint Section -->
-  <section style="padding-bottom:60px;">
-    <h2>TechStruct Blueprint for Business Growth</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      Our proven framework aligns your IT strategy with your business objectives.
-    </p>
-    <ul style="max-width:700px; margin:30px auto;">
-      <li>Assess your current tech environment</li>
-      <li>Identify risks, inefficiencies, and opportunities</li>
-      <li>Deploy secure, scalable ICT solutions</li>
-      <li>Monitor performance and optimize continuously</li>
-    </ul>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 TechStruct Innovations. All Rights Reserved.
-  </footer>
-
-</body>
-</html>
+  <!-- NEW NAVIGATION BAR -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+  </nav>
+</header>
